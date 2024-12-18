@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div ng-controller="TodoController">
+  <h1>To-Do App</h1>
+  <input type="text" ng-model="newTask" placeholder="Add a new task">
+  <button ng-click="addTask()">Add</button>
+
+  <div class="task-list">
+    <div class="task-item" ng-repeat="task in tasks">
+      <div class="task-number">{{ $index + 1 }}</div>
+      <div class="task-text">{{ task.text }}</div>
+      <div class="task-date">Added on: {{ task.dateAdded }}</div>
+      <button ng-click="removeTask($index)">Remove</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
