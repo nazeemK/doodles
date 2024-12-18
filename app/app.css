@@ -1,62 +1,99 @@
-/* app css stylesheet */
-
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* Container Styles */
 h1 {
-  color: #333;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
 }
 
-input, button {
-  padding: 10px;
-  margin: 5px;
+div {
+    display: flex;
+    flex-direction: column;
 }
-
-.task-list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.task-item {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.task-text {
-  font-size: 16px;
-  flex: 1;
-}
-
-.task-date {
-  font-size: 12px;
-  color: #888;
-  margin-right: 20px;
+/* Input and Button Styling */
+input[type="text"] {
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    width: 60%;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width:100px;
+    align-self: center;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #45a049;
 }
 
-.task-number {
-  font-weight: bold;
-  margin-right: 10px;
-  display: inline-block;
-  width: 30px;
-  text-align: right;
+/* Task List Styling */
+ul.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 70%;
+    margin: 0 auto;
 }
+
+li.task-item {
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Task Text */
+.task-text {
+    flex-grow: 1;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Task Date */
+.task-date {
+    font-size: 12px;
+    color: #777;
+    margin-right: 15px;
+}
+
+/* Remove Button Styling */
+button.remove-btn {
+    background-color: #f44336;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button.remove-btn:hover {
+    background-color: #e53935;
+}
+

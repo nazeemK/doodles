@@ -16,14 +16,13 @@
   <input type="text" ng-model="newTask" placeholder="Add a new task">
   <button ng-click="addTask()">Add</button>
 
-  <div class="task-list">
-    <div class="task-item" ng-repeat="task in tasks">
-      <div class="task-number">{{ $index + 1 }}</div>
-      <div class="task-text">{{ task.text }}</div>
-      <div class="task-date">Added on: {{ task.dateAdded }}</div>
+  <ul class="task-list">
+    <li class="task-item" ng-repeat="task in tasks">
+      <span class="task-text">{{ task.number }}. {{ task.text }}</span>
+      <span class="task-date">Added on: {{ task.dateAdded }}</span>
       <button ng-click="removeTask($index)">Remove</button>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>

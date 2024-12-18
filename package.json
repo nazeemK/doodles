@@ -9,11 +9,20 @@
     "angular": "^1.7.5",
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",
-    "html5-boilerplate": "0.0.1"
+    "html5-boilerplate": "0.0.1",
+    "homepage": "https://nazeemk.github.io/doodles",
+    "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
+      "build": "mkdir dist && copy index.html dist/ && copy *.js dist/ && copy *.css dist/"
+    }
+
+
   },
   "devDependencies": {
     "angular-mocks": "^1.7.5",
     "cpx": "^1.5.0",
+    "gh-pages": "^6.2.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.3.0",
     "karma": "^3.1.1",
